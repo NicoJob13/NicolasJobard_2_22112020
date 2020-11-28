@@ -4,154 +4,194 @@
         <title>Reservia</title>
         <meta charset="utf-8">
         <meta name="description" content="Trouvez votre hébergement pour des vacances de rêve - En plein centre ville ou en pleine nature">
-        <link rel="stylesheet" href="mainpage.css">
+		<link rel="stylesheet" href="/styles/fontawesome.min.css">
+		<link rel="stylesheet" href="/styles/styles.css">
     </head>
     <body>
-        <!--Header contenant logo, menu de navigation et un lien d'inscription-->
-        <header id="entete">
-            <h1><img src="" alt=""></h1>
-            <nav id="menu">
+        <!--Header contenant logo, menu de navigation et un lien vers la page d'inscription-->
+        <header id="entetePage">
+            <a href="index.html"><img src="/images/logo/Reservia.svg" alt="logo du site contenant l'expression Reservia en bleu"></a>
+            <nav id="menuPage">
                 <ul>
                     <li><a href="#hebergement">Hébergements</a></li>
                     <li><a href="#activites">Activités</a></li>
                 </ul>
             </nav>
-			<a href="">S'inscrire</a>
-        </header>        
+			<a href="#">S'inscrire</a>
+        </header>     
         <!--Corps de page : recherche, résultats, activités-->
-		<main id="contenu" class="">
+		<main id="contenuPage">
             <!--Zone de recherche avec un formulaire pour la localisation et des boutons pour les filtres-->
-            <section id="recherche" class="">
-                <h2 id="hebergement">Trouvez votre hébergement pour des vacances de rêve</h2>
-                <h3>En plein centre ville ou en pleine nature</h3>
-                    <!--Formulaire-->
-                    <Section id="formulaire" class="">
-                        <form id="lieu" method="" action="">
-                            <!--Bouton de géolocalisation avec icône-->
-							<div>
-                                <label for="geolocalisation"></label>
-                                <input type="button" value="<img src>">                            
-                            </div>
-                            <!--Champ de saisie de la ville-->
-							<div>
-                                <label for="ville"></label>
-                                <input type="search" name="ville" id="ville">
-                            </div>
-                            <!--Bouton de soumission-->
-							<div>
-                                <label for="rechercher"></label>
-                                <input type="submit" value="Rechercher">
-                            </div>
-                        </form>
-                    </Section>                    
-                    <!--Filtres sous forme de boutons-->
-                    <Section id="filtres" class="">
-                        <p>Filtres</p>
-                        <button type="button">Economique</button>
-                        <button type="button">Familial</button>
-                        <button type="button">Romantique</button>
-                        <button type="button">Animaux autorisés</button>
-						<p><img src="">Plus de 500 logements sont disponibles dans cette ville</p>
-                    </Section>
+            <section id="zoneRecherche">
+                <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+                <h2>En plein centre ville ou en pleine nature</h2>
+				<!--Formulaire-->
+				<section id="formulaire" class="buttonGroup">
+					<form id="lieu" method="post" action="">
+						<!--Bouton de géolocalisation avec icône-->
+						<div>
+							<button><i class="fas fa-map-marker-alt"></i></button>                            
+						</div>
+						<!--Champ de saisie de la ville-->
+						<div>
+						<label for="ville"></label>
+						<input type="search" name="ville" id="ville" placeholder="Marseille">
+						</div>
+						<!--Bouton de soumission-->
+						<div>
+						<label for="rechercher"></label>
+						<input type="submit" value="Rechercher">
+						</div>
+					</form>
+				</section>                    
+				<!--Filtres sous forme de boutons-->
+				<section id="filtres">
+					<div id="boutonsFiltre">
+						<h3>Filtres</h3>
+						<button type="button" class="bouton"><i class="fas fa-money-bill-wave cercle"></i>Economique</button>
+						<button type="button" class="bouton"><i class="fas fa-child cercle"></i>Familial</button>
+						<button type="button" class="bouton"><i class="fas fa-heart cercle"></i>Romantique</button>
+						<button type="button" class="bouton"><i class="fas fa-dog cercle"></i>Animaux autorisés</button>
+					</div>
+					<div id="infoResultats">
+						<i class="fas fa-info"></i>
+						<p>Plus de 500 logements sont disponibles dans cette ville</p>
+					</div>
+				</section>
             </section>
             <!--Zone de résultats-->
-            <section id="resultats" class="">
-                <!--Résultats de la recherche-->
-                <section id="tousResultats" class="">
-                    <h2>Hébergements à Marseille</h2>
-                        <!--Galerie de photos avec description, le tout entièrement cliquable-->
-                        <div>
-							<ul>
-								<li>
-									<a href="" target="_blank"><figure><img src="" alt=""><figcaption>nom description note</figcaption></figure></a>
-								</li>
-								<li>
-									<a href="" target="_blank"><figure><img src="" alt=""><figcaption>nom description note</figcaption></figure></a>
-								</li>
-								<li>
-									<a href="" target="_blank"><figure><img src="" alt=""><figcaption>nom description note</figcaption></figure></a>
-								</li>
-								<li>
-									<a href="" target="_blank"><figure><img src="" alt=""><figcaption>nom description note</figcaption></figure></a>
-								</li>
-								<li>
-									<a href="" target="_blank"><figure><img src="" alt=""><figcaption>nom description note</figcaption></figure></a>
-								</li>
-								<li>
-									<a href="" target="_blank"><figure><img src="" alt=""><figcaption>nom description note</figcaption></figure></a>
-								</li>
-							</ul>
-						</div>
-                        <!--Lien vers une page contenant tous les résultats de recherche-->
-                        <a href="">Afficher plus</a>
-                </section>  
-                <!--Les hébergements les plus populaires-->
-                <aside id="populaires" class="">
-                    <h2>Les plus populaires</h2>
-                        <!--Icône-->
-                        <img src="" alt="">
-                        <!--Galerie de photos avec description, le tout entièrement cliquable-->
-                        <div>
-							<ul>
-								<li>
-									<a href="" target="_blank"><figure><img src="" alt=""><figcaption>nom description note</figcaption></figure></a>
-								</li>
-								<li>
-									<a href="" target="_blank"><figure><img src="" alt=""><figcaption>nom description note</figcaption></figure></a>
-								</li>
-								<li>
-									<a href="" target="_blank"><figure><img src="" alt=""><figcaption>nom description note</figcaption></figure></a>
-								</li>
-							</ul>
-						</div>
-                </aside>             
-            </section>            
-            <!--Les activités possibles sur le secteur de recherche-->
-            <section id="activitesAutour" class="">
-                <h2 id="activites">Activités à Marseille</h2>
-                    <!--Galerie de photos cliquables-->
-					<div>
-						<ul>
-							<li>
-								<a href="" target="_blank"><figure><img src="" alt=""><figcaption>nom</figcaption></figure></a>
-							</li>
-							<li>
-								<a href="" target="_blank"><figure><img src="" alt=""><figcaption>nom</figcaption></figure></a>
-							</li>
-							<li>
-								<a href="" target="_blank"><figure><img src="" alt=""><figcaption>nom</figcaption></figure></a>
-							</li>
-							<li>
-								<a href="" target="_blank"><figure><img src="" alt=""><figcaption>nom</figcaption></figure></a>
-							</li>
-							<li>
-								<a href="" target="_blank"><figure><img src="" alt=""><figcaption>nom</figcaption></figure></a>
-							</li>
-							<li>
-								<a href="" target="_blank"><figure><img src="" alt=""><figcaption>nom</figcaption></figure></a>
-							</li>
-						</ul>
+			<section id="resultats">
+			<!--Résultats de la recherche-->
+				<section id="galerieGlobale" class="hebergementResultat">
+				<h2>Hébergements à Marseille</h2>
+				<!--Galerie de photos avec description, le tout entièrement cliquable-->
+					<div id="" class="cardGroup">
+					<a class="cardTop" href="#"><article>
+					<img src="/images/hebergements/medium/LaCannebiere.jpg" alt="photographie d'une chambre de l'Hôtel La Cannebière">
+					<h3>Auberge La Cannebière</h3>
+					<p>Nuit à partir de 25€</p>
+					<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+					</article>
+					</a>
+					<a class="cardTop" href="#"><article>
+					<img src="/images/hebergements/medium/Port.jpg" alt="photographie d'une chambre de l'Hôtel du port">
+					<h3>Hôtel du port</h3>
+					<p>Nuit à partir de 52€</p>
+					<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+					</article>
+					</a>
+					<a class="cardTop" href="#"><article>
+					<img src="/images/hebergements/medium/LesMouettes.jpg" alt="photographie d'une chambre de l'Hôtel Les mouettes">
+					<h3>Hôtel Les mouettes</h3>
+					<p>Nuit à partir de 76€</p>
+					<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+					</article>
+					</a>
+					<a class="cardTop" href="#"><article>
+					<img src="/images/hebergements/medium/LaMer.jpg" alt="photographie d'une chambre de l'Hôtel de la mer">
+					<h3>Hôtel de la mer</h3>
+					<p>Nuit à partir de 46€</p>
+					<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+					</article>
+					</a>
+					<a class="cardTop" href="#"><article>
+					<img src="/images/hebergements/medium/LePanier.jpg" alt="photographie d'une chambre de l'Auberge Le Panier">
+					<h3>Auberge Le Panier</h3>
+					<p>Nuit à partir de 23€</p>
+					<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+					</article>
+					</a>
+					<a class="cardTop" href="#"><article>
+					<img src="/images/hebergements/medium/ChezAmina.jpg" alt="photographie d'une chambre de l'Hôtel Chez Amina">
+					<h3>Hôtel chez Amina</h3>
+					<p>Nuit à partir de 96€</p>
+					<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+					</article>
+					</a>
 					</div>
-            </section>            
+					<!--Icône "i" + Lien vers une page contenant tous les résultats de recherche-->
+					<div id=""><a href="#">Afficher plus</a></div>
+				</section>  
+			<!--Les hébergements les plus populaires-->
+				<aside id="hebergementsPopulaires" class="hebergementResultat">
+					<div id="entetePopulaires">
+					<h2>Les plus populaires</h2>
+					<!--Icône-->
+					<i class="fas fa-chart-line"></i>
+					</div>
+					<!--Galerie de photos avec description, le tout entièrement cliquable-->
+					<div id="galeriePopulaires">
+					<a class="cardLeft" href="#"><article>
+					<img src="/images/hebergements/medium/LeSoleilDuMatin.jpg" alt="photographie d'une chambre de l'Hôtel Le soleil du matin">
+					<h3>Hôtel Le soleil du matin</h3>
+					<p>Nuit à partir de 128€</p>
+					<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+					</article></a>
+					<a class="cardLeft" href="#"><article>
+					<img src="/images/hebergements/medium/AuCoeurDeLEau.jpg" alt="photographie d'une chambre de Au coeur de l'eau Chambres d'hôtes">
+					<h3>Au coeur de l'eau Chambres d'hôtes</h3>
+					<p>Nuit à partir de 71€</p>
+					<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+					</article></a>
+					<a class="cardLeft" href="#"><article>
+					<img src="/images/hebergements/medium/ToutBleuetBlanc.jpg" alt="photographie d'une chambre de l'Hôtel Tout bleu et Blanc">
+					<h3>Hôtel Tout bleu et Blanc</h3>
+					<p>Nuit à partir de 68€</p>
+					<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+					</article></a>
+					</div>
+				</aside>             
+			<!--Les activités possibles sur le secteur de recherche-->
+				<section id="activites" class="">
+				<h2>Activités à Marseille</h2>
+				<!--Galerie de photos cliquables-->
+				<div id="galerieActivites">
+					<a class="cardTop" href="#"><article>
+					<img src="/images/activites/medium/VieuxPort.jpg" alt="photographie du vieux port de Marseille">
+					<h3>Vieux Port</h3>
+					</article></a>
+					<a class="cardTop" href="#"><article>
+					<img src="/images/activites/medium/FortDePomegues.jpg" alt="photographie d'un paysage contenant le fort de Pomègues">
+					<h3>Fort de Pomègues</h3>
+					</article></a>
+					<a class="cardTop" href="#"><article>
+					<img src="/images/activites/medium/IlesDuFrioul.jpg" alt="photographie représentant les Iles du Frioul">
+					<h3>Îles du Frioul</h3>
+					</article></a>
+					<a class="cardTop" href="#"><article>
+					<img src="/images/activites/medium/LesCalanques.jpg" alt="photographie d'un paysage escarpé du Parc National des Calanques">
+					<h3>Parc National des Calanques</h3>
+					</article></a>
+					<a class="cardTop" href="#"><article>
+					<img src="/images/activites/medium/NotreDameDeLaGarde.jpg" alt="photographie montrant au loin la basilique Notre-Dame de La Garde">
+					<h3>Notre-Dame-de-la-Garde</h3>
+					</article></a>
+					<a class="cardTop" href="#"><article>
+					<img src="/images/activites/medium/ParcLongchamp.jpg" alt="photographie d'une façade du Parc Longchamp">
+					<h3>Parc Longchamp</h3>
+					</article></a>
+				</div>
+				</section>
+			</section>
         </main>
         <!--Pied de page destiné aux mentions obligatoires, à la charte qualité et à l'assistance, avec possibilité de contact et de candidature pour référencement des hôtels-->
-        <footer id="piedPage" class="">
+        <footer id="piedPage">
             <!--Trois zones, A propos, Nos hébergements et Assistance, comprenant chacune des liens-->
-			<section id="aPropos" class="">
-				<h3>A propos</h3>
-					<a href="">Fonctionnement du site</a><br>
-					<a href="">Conditions générales de vente</a><br>
-					<a href="">Données et confidentialité</a>
+			<section id="aPropos" class="colPiedPage">
+			<h3>A propos</h3>
+				<a href="#">Fonctionnement du site</a><br>
+				<a href="#">Conditions générales de vente</a><br>
+				<a href="#">Données et confidentialité</a>
 			</section>
-            <section id="infoHebergements" class="">
-				<h3>Nos hébergements</h3>
-					<a href="">Charte qualité</a><br>
-					<a href="">Soumettre votre hôtel</a>
+            <section id="infoHebergements" class="colPiedPage">
+			<h3>Nos hébergements</h3>
+				<a href="#">Charte qualité</a><br>
+				<a href="#">Soumettre votre hôtel</a>
 			</section>
-			<section id="assistance" class="">
-				<h3>Assistance</h3>
-                    <a href="">Centre d'aide</a><br>
-                    <a href="">Nous contacter</a>
+			<section id="assistance" class="colPiedPage">
+			<h3>Assistance</h3>
+				<a href="#">Centre d'aide</a><br>
+				<a href="#">Nous contacter</a>
 			</section>
         </footer>
     </body>
