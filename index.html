@@ -4,20 +4,24 @@
         <title>Reservia</title>
         <meta charset="utf-8">
         <meta name="description" content="Trouvez votre hébergement pour des vacances de rêve - En plein centre ville ou en pleine nature">
-		<link rel="stylesheet" href="/styles/fontawesome.min.css">
 		<link rel="stylesheet" href="/styles/styles.css">
+		<script src="https://kit.fontawesome.com/1ff953b2ad.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <!--Header contenant logo, menu de navigation et un lien vers la page d'inscription-->
-        <header id="entetePage">
-            <a href="index.html"><img src="/images/logo/Reservia.svg" alt="logo du site contenant l'expression Reservia en bleu"></a>
-            <nav id="menuPage">
-                <ul>
-                    <li><a href="#hebergement">Hébergements</a></li>
-                    <li><a href="#activites">Activités</a></li>
-                </ul>
-            </nav>
-			<a href="#">S'inscrire</a>
+        <header>
+            <nav>
+				<div class="logo">
+					<a href="index.html"><img src="/images/logo/Reservia.svg" alt="logo du site contenant l'expression Reservia en bleu"></a>
+				</div>
+				<div class="navMenu">
+				<ul>
+                    <li  class="navLinkHeb"><a href="#hebergement">Hébergements</a></li>
+					<li  class="navLinkAct"><a href="#activites">Activités</a></li>
+				</ul>
+				<p><a class="suscribeLink" href="#"><strong>S'inscrire</strong></a></p>
+				</div>
+			</nav>
         </header>     
         <!--Corps de page : recherche, résultats, activités-->
 		<main id="contenuPage">
@@ -54,7 +58,7 @@
 						<button type="button" class="bouton"><i class="fas fa-dog cercle"></i>Animaux autorisés</button>
 					</div>
 					<div id="infoResultats">
-						<i class="fas fa-info"></i>
+						<p><i class="fas fa-info cercle"></i></p>
 						<p>Plus de 500 logements sont disponibles dans cette ville</p>
 					</div>
 				</section>
@@ -62,6 +66,7 @@
             <!--Zone de résultats-->
 			<section id="resultats">
 			<!--Résultats de la recherche-->
+			<div id="hebergement">
 				<section id="galerieGlobale" class="hebergementResultat">
 				<h2>Hébergements à Marseille</h2>
 				<!--Galerie de photos avec description, le tout entièrement cliquable-->
@@ -87,6 +92,8 @@
 					<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
 					</article>
 					</a>
+					</div>
+					<div id="" class="cardGroup">
 					<a class="cardTop" href="#"><article>
 					<img src="/images/hebergements/medium/LaMer.jpg" alt="photographie d'une chambre de l'Hôtel de la mer">
 					<h3>Hôtel de la mer</h3>
@@ -117,7 +124,7 @@
 					<div id="entetePopulaires">
 					<h2>Les plus populaires</h2>
 					<!--Icône-->
-					<i class="fas fa-chart-line"></i>
+					<p><i class="fas fa-chart-line"></i></p>
 					</div>
 					<!--Galerie de photos avec description, le tout entièrement cliquable-->
 					<div id="galeriePopulaires">
@@ -140,7 +147,8 @@
 					<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
 					</article></a>
 					</div>
-				</aside>             
+				</aside>
+			</div>             
 			<!--Les activités possibles sur le secteur de recherche-->
 				<section id="activites" class="">
 				<h2>Activités à Marseille</h2>
