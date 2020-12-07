@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --blue: #0065fc;
+    --light-blue: #deebff;
+    --grey: #f2f2f2;
+}
+body {
+    font-family: Raleway, Roboto, Montserrat, sans-serif;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: #333333;
+}
+
+header {
+    height: 100px;
+    padding-right: 25px;
+    padding-top: 20px;
+}
+
+nav {
+    display: flex;
+}
+
+ul {
+    height: 100%;
+    width: 300px;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding-right: 2rem;
+}
+nav ul li a {
+    height: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+nav ul li a:hover {
+    color: var(--blue);
+    border-top: 2px solid var(--blue);
+    padding-top: 40px;
+}
+
+.logo {
+    width: 1000px;
+}
+
+.navMenu {
+    display: flex;
+}
+
+.navLinkHeb {
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+.navLinkAct {
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+.suscribeLink {    
+    color: var(--blue);
+    width: 50px;
+    padding-left: .5rem;
+}
+
+@media screen and (max-width: 1024px){
+    header {
+        height: 130px;
+        padding-top: 20px;
+    }
+    
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    ul {
+        height: 100%;
+        width: auto;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav ul li a {
+        height: 100%;
+        width: 100%;
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+    
+    nav ul li a:hover {
+        color: var(--blue);
+        border-top: none;
+        border-bottom: 2px solid var(--blue);
+        padding-top: 40px;
+        padding-bottom: 10px;
+    }
+    
+    .logo {
+        width: 1000px;
+    }
+    
+    .navMenu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .navLinkHeb {
+        width: 50%;
+        text-align: center;
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+    
+    .navLinkAct {
+        width: 50%;
+        text-align: center;
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+    
+    .suscribeLink {    
+        color: var(--blue);
+        width: 200px;
+        position: absolute;
+        right: -100px;
+        top: 40px;
+    }
+}
