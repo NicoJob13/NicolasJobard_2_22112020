@@ -4,11 +4,12 @@
     --blue: #0065fc;
     --light-blue: #deebff;
     --grey: #f2f2f2;
+    --bordernav: #b6b6b6;
 }
+
 body {
     font-family: Raleway, Roboto, Montserrat, sans-serif;
-    padding-left: 50px;
-    padding-right: 50px;
+    margin: 0;
 }
 
 a {
@@ -16,123 +17,78 @@ a {
     color: #333333;
 }
 
-header {
-    height: 100px;
-    padding-right: 25px;
-    padding-top: 20px;
-}
-
 nav {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto auto auto;
+    grid-template-rows: 100px;
+    align-items: center;
+    padding-left: 3rem;
+    padding-right: 3rem;
 }
 
-ul {
-    height: 100%;
-    width: 300px;
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
+.navLink {
+    padding-left: 2rem;
     padding-right: 2rem;
-}
-nav ul li a {
-    height: 100%;
-    padding-right: 1rem;
-    padding-left: 1rem;
+    text-align: center;
 }
 
-nav ul li a:hover {
+.navLink:hover {
     color: var(--blue);
     border-top: 2px solid var(--blue);
-    padding-top: 40px;
-}
-
-.logo {
-    width: 1000px;
-}
-
-.navMenu {
-    display: flex;
-}
-
-.navLinkHeb {
-    padding-right: 1rem;
-    padding-left: 1rem;
-}
-
-.navLinkAct {
-    padding-right: 1rem;
-    padding-left: 1rem;
+    padding-top: 39px;
 }
 
 .suscribeLink {    
     color: var(--blue);
-    width: 50px;
-    padding-left: .5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 @media screen and (max-width: 1024px){
-    header {
-        height: 130px;
-        padding-top: 20px;
-    }
-    
     nav {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    ul {
-        height: 100%;
-        width: auto;
-        list-style: none;
-        display: flex;
-        justify-content: space-between;
+        padding-left: 0;
+        padding-right: 0;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 3fr 1fr;
     }
 
-    nav ul li a {
-        height: 100%;
-        width: 100%;
-        padding-right: 1rem;
-        padding-left: 1rem;
-    }
-    
-    nav ul li a:hover {
-        color: var(--blue);
-        border-top: none;
-        border-bottom: 2px solid var(--blue);
-        padding-top: 40px;
-        padding-bottom: 10px;
-    }
-    
     .logo {
-        width: 1000px;
-    }
-    
-    .navMenu {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
+        padding-left: 2rem;
     }
 
     .navLinkHeb {
-        width: 50%;
+        grid-row-start: 2;
+        grid-column-start: 1;
+        padding-bottom: 20px;
+        border-bottom: 2px solid var(--bordernav);
         text-align: center;
-        padding-right: 1rem;
-        padding-left: 1rem;
     }
-    
+
     .navLinkAct {
-        width: 50%;
+        grid-row-start: 2;
+        grid-column-start: 2;
+        padding-bottom: 20px;
+        border-bottom: 2px solid var(--bordernav);
         text-align: center;
-        padding-right: 1rem;
-        padding-left: 1rem;
     }
-    
-    .suscribeLink {    
+
+    .navLink:hover {
+        border-top: none;
+    }
+
+    .navLinkHeb:hover {
         color: var(--blue);
-        width: 200px;
-        position: absolute;
-        right: -100px;
-        top: 40px;
+        border-top: none;
+        border-bottom: 2px solid var(--blue);
+    }
+
+    .navLinkAct:hover {
+        color: var(--blue);
+        border-top: none;
+        border-bottom: 2px solid var(--blue);
+    }
+
+    .suscribe {
+        text-align: right;
     }
 }
