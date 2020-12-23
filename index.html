@@ -36,32 +36,33 @@
 					<form id="lieu" method="post" action="">
 						<!--Bouton de géolocalisation avec icône-->
 						<div>
-							<button><i class="fas fa-map-marker-alt"></i></button>                            
+							<button class="geoIcon"><i class="fas fa-map-marker-alt"></i></button>                            
 						</div>
 						<!--Champ de saisie de la ville-->
 						<div>
-						<label for="ville"></label>
-						<input type="search" name="ville" id="ville" placeholder="Marseille">
+						<input type="search" name="ville" id="ville" class="cityInput" placeholder="Marseille, France">
 						</div>
 						<!--Bouton de soumission-->
 						<div>
-						<label for="rechercher"></label>
-						<input type="submit" value="Rechercher">
+						<button type="submit" class="searchText"><span>Rechercher</span></button>
+						<button type="submit" class="searchIcon"><i class="fas fa-search"></i></button>
 						</div>
 					</form>
 				</section>                    
 				<!--Filtres sous forme de boutons-->
-				<section id="filtres">
-					<div id="boutonsFiltre">
-						<h3>Filtres</h3>
-						<button type="button" class="bouton"><i class="fas fa-money-bill-wave cercle"></i>Economique</button>
-						<button type="button" class="bouton"><i class="fas fa-child cercle"></i>Familial</button>
-						<button type="button" class="bouton"><i class="fas fa-heart cercle"></i>Romantique</button>
-						<button type="button" class="bouton"><i class="fas fa-dog cercle"></i>Animaux autorisés</button>
+				<section>
+					<div class="filters">
+						<div class="filterTitle"><h3>Filtres</h3></div>
+						<div class="filterButtonsContainer">
+						<button type="button" class="filterButton"><span class="filterCircleIcon"><i class="fas fa-money-bill-wave"></i></span><span class="filterText">Economique</span></button>
+						<button type="button" class="filterButton"><span class="filterCircleIcon"><i class="fas fa-child"></i></span><span class="filterText">Familial</span></button>
+						<button type="button" class="filterButton"><span class="filterCircleIcon"><i class="fas fa-heart"></i></span><span class="filterText">Romantique</span></button>
+						<button type="button" class="filterButton"><span class="filterCircleIcon"><i class="fas fa-dog"></i></span><span class="filterText">Animaux autorisés</span></button>
+						</div>
 					</div>
-					<div id="infoResultats">
-						<p><i class="fas fa-info cercle"></i></p>
-						<p>Plus de 500 logements sont disponibles dans cette ville</p>
+					<div class="infoResultats">
+						<span class="infoCircleIcon"><i class="fas fa-info"></i></span>
+						<span>Plus de 500 logements sont disponibles dans cette ville</span>
 					</div>
 				</section>
             </section>
