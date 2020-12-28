@@ -18,10 +18,6 @@ h1 {
     margin: 0px;
 }
 
-h3 {
-    padding-top: 1rem;
-}
-
 a {
     text-decoration: none;
     color: #333333;
@@ -184,6 +180,127 @@ nav {
     padding-top: 1.5rem;
 }
 
+#resultats {
+    display: grid;
+    grid-template-rows: auto auto;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin-top: 2rem;
+}
+
+.hebergements {
+    display: grid;
+    column-gap: 2rem;
+}
+
+.hebergementResultat {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--grey);
+    border-radius: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.cardGroup {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 2.2rem;
+    row-gap: 1rem;
+    padding-bottom: 2rem;
+}
+
+.cardTop {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 1rem;
+}
+
+.roomPictureTop {
+    height: 7.2rem;
+    width: auto;
+    border: 4px solid white;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.noteIcons {
+    color: var(--blue);
+}
+
+.cardTopText {
+    display: flex;
+    flex-direction: column;
+    padding: .5rem;
+    line-height: 1.5rem;
+}
+
+.cardTopText > h3 {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin: 0px;
+}
+
+.moreLink {
+    font-weight: bold;
+}
+
+.hebergementsPopulaires {
+    grid-column-start: 2;
+    background-color: var(--grey);
+    border-radius: 1rem;
+    padding: 0 1rem 0 1rem;
+}
+
+.entetePopulaires {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.galeriePopulaires {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardLeft {
+    height: auto;
+    width: auto;
+    display: flex;
+    background-color: white;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+}
+
+.roomPictureLeft {
+    height: 8.4rem;
+    width: 7.9rem;
+    border: 4px solid white;
+    border-radius: 1rem 0 0 1rem;
+}
+
+.cardLeftText {
+    display: flex;
+    flex-direction: column;
+    padding: .5rem;
+    line-height: 1.7rem;
+}
+
+.cardLeftText {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin: 0px;
+}
+
+.activites {
+    grid-row-start: 2;
+}
+
 footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -300,48 +417,6 @@ footer {
         margin-right: 1.5rem;
         margin-bottom: 1rem;
         padding-right: 1.5rem;
-    }
-    
-    .filterButton:hover {
-        background-color: var(--light-blue);
-        color: var(--blue);
-        border: .2rem solid var(--light-blue);
-        cursor: pointer;
-    }
-    
-    .filterCircleIcon {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 3rem;
-        width: 3rem;
-        background-color: var(--light-blue);
-        border-radius: 3rem;
-        color: var(--blue);
-        margin-right: 1rem;
-        margin-left: -1rem;
-    }
-    
-    .filterText {
-        font-weight: bold;
-    }
-    
-    .infoCircleIcon {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 1.6rem;
-        width: 1.6rem;
-        background-color: white;
-        border: 2px solid var(--grey);
-        border-radius: 3rem;
-        color: var(--blue);
-        margin-right: 1rem;
-    }
-    .infoResultats {
-        display: flex;
-        align-items: center;
-        padding-top: 1.5rem;
     }
 
     .footer {
