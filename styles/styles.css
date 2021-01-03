@@ -180,9 +180,8 @@ nav {
     padding-top: 1.5rem;
 }
 
-#resultats {
+.resultats {
     display: grid;
-    grid-template-rows: auto auto;
     padding-left: 3rem;
     padding-right: 3rem;
     margin-top: 2rem;
@@ -190,6 +189,7 @@ nav {
 
 .hebergements {
     display: grid;
+    grid-template-columns: 2fr 1fr;
     column-gap: 2rem;
 }
 
@@ -205,17 +205,24 @@ nav {
 .cardGroup {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto;
     column-gap: 2.2rem;
     row-gap: 1rem;
     padding-bottom: 2rem;
 }
 
 .cardTop {
+    height: 100%;
+    width: auto;
     display: flex;
     flex-direction: column;
     background-color: white;
     border-radius: 1rem;
+    box-shadow: .2rem .2rem .2rem var(--bordernav);
+}
+
+.cardTop:hover {
+    background-color: var(--light-blue);
 }
 
 .roomPictureTop {
@@ -275,6 +282,11 @@ nav {
     background-color: white;
     border-radius: 1rem;
     margin-bottom: 2rem;
+    box-shadow: .2rem .2rem .2rem var(--bordernav);
+}
+
+.cardLeft:hover {
+    background-color: var(--light-blue);
 }
 
 .roomPictureLeft {
@@ -291,7 +303,7 @@ nav {
     line-height: 1.7rem;
 }
 
-.cardLeftText {
+.cardLeftText > h3 {
     padding-top: 0px;
     padding-bottom: 0px;
     margin: 0px;
@@ -299,6 +311,80 @@ nav {
 
 .activites {
     grid-row-start: 2;
+    padding-bottom: 2rem;
+}
+
+.galerieActivites {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr 2fr;
+    grid-gap: 2rem;
+}
+
+.activityCard {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    box-shadow: .2rem .2rem .2rem var(--bordernav);
+}
+
+.activityCard:hover {
+    background-color: var(--light-blue);
+}
+
+.activityCard1 {
+    grid-column-start: 1;
+    grid-column-end: span 1;
+    grid-row-start: 1;
+    grid-row-end: span 3;
+}
+
+.activityCard2 {
+    grid-column-start: 2;
+    grid-column-end: span 1;
+    grid-row-start: 1;
+    grid-row-end: span 2;
+}
+
+.activityCard3 {
+    grid-column-start: 2;
+    grid-column-end: span 1;
+    grid-row-start: 3;
+    grid-row-end: span 1;
+}
+
+.activityCard4 {
+    grid-column-start: 3;
+    grid-column-end: span 1;
+    grid-row-start: 1;
+    grid-row-end: span 3;
+}
+
+.activityCard5 {
+    grid-column: 4;
+    grid-column-end: span 1;
+    grid-row-start: 1;
+    grid-row-end: span 1;
+}
+
+.activityCard6 {
+    grid-column-start: 4;
+    grid-column-end: span 1;
+    grid-row-start: 2;
+    grid-row-end: span 2;
+}
+
+.activityImg {
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+    object-fit: cover;
+}
+
+.activityText {
+    padding-left: 1rem;
 }
 
 footer {
