@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/*Paramétrages généraux*/
+
 :root {
     --blue: #0065fc;
     --light-blue: #deebff;
     --grey: #f2f2f2;
-    --bordernav: #b6b6b6;
+    --bordernav: #c9c9c9;
 }
 
 body {
     font-family: Raleway, Roboto, Montserrat, sans-serif;
     margin: 0;
+    padding: 0;
 }
 
 h1 {
@@ -18,51 +21,66 @@ h1 {
     margin: 0px;
 }
 
+h2 {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
 a {
     text-decoration: none;
-    color: #333333;
+    color: black;
 }
+
+/*Header - Barre de navigation*/
 
 nav {
     display: grid;
     grid-template-columns: 1fr auto auto auto;
-    grid-template-rows: 100px;
-    align-items: center;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding: 0 3rem 2rem 3rem;
+}
+
+.logo {
+    padding: 1.5rem 0 0 0;
 }
 
 .navLink {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: 2.5rem 2rem 0 2rem;
+    font-weight: 600;
     text-align: center;
+    border-top: 2px solid #ffffff00;
 }
 
 .navLink:hover {
     color: var(--blue);
     border-top: 2px solid var(--blue);
-    padding-top: 39px;
 }
 
 .suscribeLink {    
     color: var(--blue);
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: 2.6rem 2rem 0 2rem;
 }
 
-#zoneRecherche {
+/*--------------Zone de recherche---------------*/
+
+.searchZone {
     padding-left: 3rem;
     padding-right: 3rem;
 }
 
-#zoneRecherche > h2 {
+.searchZone > h2 {
     font-size: 1rem;
     font-weight: normal;
     margin-top: .4rem;
 }
 
-#lieu {
+.localisation {
     display: flex;
+    padding: .5rem 0 2rem 0;
 }
 
 .geoIcon {
@@ -109,20 +127,15 @@ nav {
     display: none;
 }
 
-.filters {
-    display: flex;
-    align-items: center;
-}
+/*Filtres*/
 
-.filterTitle {
+.filters {
     display: flex;
     align-items: center;
 }
 
 .filterButtonsContainer {
     display: flex;
-    align-items: center;
-    padding-top: 1.1rem;
 }
 
 .filterButton {
@@ -134,8 +147,8 @@ nav {
     border-radius: 3rem;
     color: black;
     font-weight: bold;
-    margin-left: 2rem;
-    padding-right: 1rem;
+    margin: 0 0 0 2rem;
+    padding: 0 1rem 0 0;
 }
 
 .filterButton:hover {
@@ -174,218 +187,246 @@ nav {
     color: var(--blue);
     margin-right: 1rem;
 }
-.infoResultats {
+
+.resultsInfo {
     display: flex;
     align-items: center;
     padding-top: 1.5rem;
 }
 
-.resultats {
-    display: grid;
+/*--------------------Zone de résultats de recherche-------------------*/
+
+.results {
     padding-left: 3rem;
     padding-right: 3rem;
     margin-top: 2rem;
 }
 
-.hebergements {
+/*-----Hébergements-----*/
+
+.heb {
     display: grid;
     grid-template-columns: 2fr 1fr;
     column-gap: 2rem;
 }
 
-.hebergementResultat {
+.hebResults {
     display: flex;
     flex-direction: column;
     background-color: var(--grey);
     border-radius: 1rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding: 0 2rem 0 2rem;
 }
 
-.cardGroup {
+.hebCardGroup {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    column-gap: 2.2rem;
-    row-gap: 1rem;
-    padding-bottom: 2rem;
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 1.5rem;
+    row-gap: 2rem;
+    padding: 0 0 1rem 0;
 }
 
-.cardTop {
-    height: 100%;
-    width: auto;
+.hebCard {
     display: flex;
     flex-direction: column;
     background-color: white;
     border-radius: 1rem;
-    box-shadow: .2rem .2rem .2rem var(--bordernav);
+    border: 3px solid white;
+    box-shadow: 0 .1rem .4rem .1rem var(--bordernav);
 }
 
-.cardTop:hover {
+.hebCard:hover {
     background-color: var(--light-blue);
+    border: 3px solid var(--light-blue);
 }
 
-.roomPictureTop {
+.hebCardPicture {
     height: 7.2rem;
-    width: auto;
-    border: 4px solid white;
+    width: 100%;
     border-radius: 1rem 1rem 0 0;
+    object-fit: cover;
 }
 
-.noteIcons {
-    color: var(--blue);
-}
-
-.cardTopText {
+.hebCardText {
     display: flex;
     flex-direction: column;
-    padding: .5rem;
+    justify-content: space-around;
     line-height: 1.5rem;
+    padding: .5rem .5rem 0 .5rem;
 }
 
-.cardTopText > h3 {
-    padding-top: 0px;
-    padding-bottom: 0px;
-    margin: 0px;
+.hebCardTitle {
+    margin: 0;
+}
+
+.hebNoteIcons {
+    color: var(--blue);
+    padding: .2rem 0 .5rem .5rem;
 }
 
 .moreLink {
     font-weight: bold;
+    padding: 1.5rem 0 0 0;
 }
 
-.hebergementsPopulaires {
+.hebPop {
     grid-column-start: 2;
+    display: flex;
+    flex-direction: column;
     background-color: var(--grey);
     border-radius: 1rem;
-    padding: 0 1rem 0 1rem;
+    padding: 0 2rem 2rem 2rem;
 }
 
-.entetePopulaires {
+.hebPopTitle {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 2rem;
-    padding-right: 2rem;
 }
 
-.galeriePopulaires {
-    padding-left: 2rem;
-    padding-right: 2rem;
-    display: flex;
-    flex-direction: column;
+.hebPopCardGroup {
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 2rem;
 }
 
-.cardLeft {
-    height: auto;
-    width: auto;
+.hebPopCard {
+    min-height: 9rem;
+    max-height: 9rem;
     display: flex;
     background-color: white;
     border-radius: 1rem;
-    margin-bottom: 2rem;
-    box-shadow: .2rem .2rem .2rem var(--bordernav);
+    border: 3px solid white;
+    box-shadow: 0 .1rem .4rem .1rem var(--bordernav);
 }
 
-.cardLeft:hover {
+.hebPopCard:hover {
     background-color: var(--light-blue);
+    border: 3px solid var(--light-blue);
 }
 
-.roomPictureLeft {
-    height: 8.4rem;
+.hebPopCardPicture {
+    height: auto;
     width: 7.9rem;
-    border: 4px solid white;
     border-radius: 1rem 0 0 1rem;
+    object-fit: cover;
 }
 
-.cardLeftText {
+.hebPopCardInfo {
     display: flex;
     flex-direction: column;
-    padding: .5rem;
-    line-height: 1.7rem;
+    justify-content: space-between;
+    padding: .5rem .5rem .5rem .9rem;
 }
 
-.cardLeftText > h3 {
-    padding-top: 0px;
-    padding-bottom: 0px;
-    margin: 0px;
+.hebPopCardText {
+    display: flex;
+    flex-direction: column;
 }
 
-.activites {
-    grid-row-start: 2;
-    padding-bottom: 2rem;
+.hebPopCardTitle {
+    margin: 0;
 }
 
-.galerieActivites {
+.hebPopTarif {
+    padding-top: .5rem;
+}
+
+.hebPopNoteIcons {
+    color: var(--blue);
+}
+
+/*----Activités----*/
+
+.act {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+}
+
+.actCardGroup {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 2fr 1fr 2fr;
-    grid-gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 2.5rem;
+    padding: 0 0 5rem 0;
 }
 
-.activityCard {
+.actCard {
     height: 100%;
-    width: 100%;
+    max-height: 29rem;
     display: flex;
     flex-direction: column;
+    background-color: white;
     border-radius: 1rem;
-    box-shadow: .2rem .2rem .2rem var(--bordernav);
+    box-shadow: 0 .1rem .4rem .1rem var(--bordernav);
+    padding: 0 0 3.5rem 0;
 }
 
-.activityCard:hover {
+.actCard:hover {
     background-color: var(--light-blue);
 }
 
-.activityCard1 {
-    grid-column-start: 1;
-    grid-column-end: span 1;
-    grid-row-start: 1;
-    grid-row-end: span 3;
-}
-
-.activityCard2 {
-    grid-column-start: 2;
-    grid-column-end: span 1;
-    grid-row-start: 1;
-    grid-row-end: span 2;
-}
-
-.activityCard3 {
-    grid-column-start: 2;
-    grid-column-end: span 1;
-    grid-row-start: 3;
-    grid-row-end: span 1;
-}
-
-.activityCard4 {
-    grid-column-start: 3;
-    grid-column-end: span 1;
-    grid-row-start: 1;
-    grid-row-end: span 3;
-}
-
-.activityCard5 {
-    grid-column: 4;
-    grid-column-end: span 1;
-    grid-row-start: 1;
-    grid-row-end: span 1;
-}
-
-.activityCard6 {
-    grid-column-start: 4;
-    grid-column-end: span 1;
-    grid-row-start: 2;
-    grid-row-end: span 2;
-}
-
-.activityImg {
+.actCardPicture {
     height: 100%;
     width: 100%;
     border-radius: 1rem 1rem 0 0;
     object-fit: cover;
 }
 
-.activityText {
-    padding-left: 1rem;
+.actCardTitle {
+    vertical-align: middle;
+    justify-self: stretch;
+    align-self: stretch;
+    max-height: auto;
+    padding: 0 1rem .5rem 1rem;
 }
+
+.actCard1 {
+    height: 27.5rem;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-end: span 2;
+}
+
+.actCard2 {
+    height: 12rem;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: span 2;
+}
+
+.actCard3 {
+    height: 10rem;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    grid-row-end: span 1;
+    align-self: flex-end;
+}
+
+.actCard4 {
+    height: 27.5rem;
+    grid-column-start: 3;
+    grid-row-start: 1;
+    grid-row-end: span 2;
+}
+
+.actCard5 {
+    height: 10rem;
+    grid-column: 4;
+    grid-row-start: 1;
+    grid-row-end: span 1;
+}
+
+.actCard6 {
+    height: 12rem;
+    grid-column-start: 4;
+    grid-row-start: 2;
+    grid-row-end: span 3;
+    align-self: flex-end;
+}
+
+/*--------------Pied de page-------------*/
 
 footer {
     display: grid;
@@ -400,15 +441,16 @@ footer {
         padding-top: 2rem;
     }
 
+    /*Header - Barre de navigation*/
+
     nav {
-        padding-left: 0;
-        padding-right: 0;
+        padding: 0;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 3fr 1fr;
+        align-items: center;
     }
 
     .logo {
-        padding-left: 2rem;
+        padding: 2rem 0 0 2rem;
     }
 
     .navLinkHeb {
@@ -444,13 +486,18 @@ footer {
         border-bottom: 2px solid var(--blue);
     }
 
-    .suscribe {
+    .suscribeLink {
         text-align: right;
     }
 
-    #zoneRecherche {
-        padding-left: 2rem;
-        padding-right: 2rem;
+    /*--------------Zone de recherche---------------*/
+
+    .localisation {
+        padding: .5rem 0 .3rem 0;
+    }
+
+    .searchZone {
+        padding: 0 2rem 0 2rem;
     }
 
     .geoIcon {
@@ -479,15 +526,22 @@ footer {
         margin-left: -.5rem;
     }
 
-    .filters {
-        display: initial;
+    .searchIcon:hover {
+        background-color: var(--light-blue);
+        color: var(--blue);
+        cursor: pointer;
     }
-    
+
+    /*Filtres*/
+
+    .filters {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
     .filterButtonsContainer {
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
-        padding-top: 0;
     }
     
     .filterButton {
@@ -499,14 +553,123 @@ footer {
         border-radius: 3rem;
         color: black;
         font-weight: bold;
-        margin-left: 0;
-        margin-right: 1.5rem;
-        margin-bottom: 1rem;
-        padding-right: 1.5rem;
+        margin: 0 1rem 1rem 1rem;
     }
 
-    .footer {
+    .infoCircleIcon {
+        width: 2rem;
+    }
+
+    /*--------------------Zone de résultats de recherche-------------------*/
+
+    .results {
+        padding: 0;
+    }
+
+    .heb {
         grid-template-columns: auto;
+        column-gap: 0rem;
+        row-gap: 1rem;
+    }
+
+    .hebResults {
+        grid-row-start: 2;
+        row-gap: 1rem;
+        background-color: white;
+        border-radius: 0;
+        padding: 0 2rem 0 2rem;
+    }
+
+    .hebCardGroup {
+        grid-template-columns: 1fr;
+        column-gap: 1rem;
+        row-gap: 1rem;
+        padding: 0 0 .5rem 0;
+    }
+
+    .moreLink {
+        padding: 0 0 1rem 0;
+    }
+
+    .hebPop {
+        grid-column-start: 1;
+        grid-row-start: 1;
+        border-radius: 0;
+    }
+
+    .hebPopTitle {
+        padding: .5rem 0;
+    }
+
+    .hebPopCardGroup {
+        padding: 0;
+        row-gap: 1rem;
+    }
+
+    /*----Activités----*/
+
+    .act {
+        padding: 1rem 2rem;
+    }
+
+    .actCardGroup {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 15rem);
+        column-gap: 0;
+        row-gap: 1rem;
+        padding: 0;
+    }
+
+    .actCard {
+        height: 11rem;
+    }
+
+    .actCard1 {
+        height: auto;
+        grid-column-start: 1;
+        grid-row-start: 1;
+        grid-row-end: span 1;
+    }
+    
+    .actCard2 {
+        height: auto;
+        grid-column-start: 1;
+        grid-row-start: 2;
+        grid-row-end: span 1;
+    }
+    
+    .actCard3 {
+        height: auto;
+        grid-column-start: 1;
+        grid-row-start: 3;
+        grid-row-end: span 1;
+        align-self: initial;
+    }
+    
+    .actCard4 {
+        height: auto;
+        grid-column-start: 1;
+        grid-row-start: 4;
+        grid-row-end: span 1;
+    }
+    
+    .actCard5 {
+        height: 11rem;
+        grid-column-start: 1;
+        grid-row-start: 5;
+        grid-row-end: span 1;
+    }
+    
+    .actCard6 {
+        height: 9rem;
+        grid-column-start: 1;
+        grid-row-start: 6;
+        align-self: initial;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
         padding: 1rem 2rem 2rem 2rem;
     }
 }
