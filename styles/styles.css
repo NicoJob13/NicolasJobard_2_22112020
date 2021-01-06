@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*=====Import des polices nécessaires et Paramétrages généraux=====*/
 
-/*Paramétrages généraux*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
     --blue: #0065fc;
@@ -36,7 +36,9 @@ a {
     color: black;
 }
 
-/*Header - Barre de navigation*/
+/*=====Desktop version (Standard version)=====*/
+
+/******Header - Navbar******/
 
 nav {
     display: grid;
@@ -65,7 +67,9 @@ nav {
     padding: 2.6rem 2rem 0 2rem;
 }
 
-/*--------------Zone de recherche---------------*/
+/******End of Header - Navbar******/
+
+/******Search Zone******/
 
 .searchZone {
     padding-left: 3rem;
@@ -77,6 +81,8 @@ nav {
     font-weight: normal;
     margin-top: .4rem;
 }
+
+/*-----Form bar-----*/
 
 .localisation {
     display: flex;
@@ -127,7 +133,9 @@ nav {
     display: none;
 }
 
-/*Filtres*/
+/*-----End of Form bar-----*/
+
+/*-----Filters buttons-----*/
 
 .filters {
     display: flex;
@@ -194,7 +202,11 @@ nav {
     padding-top: 1.5rem;
 }
 
-/*--------------------Zone de résultats de recherche-------------------*/
+/*-----End of Filters buttons-----*/
+
+/******End of Search Zone******/
+
+/******Results Zone******/
 
 .results {
     padding-left: 3rem;
@@ -202,13 +214,25 @@ nav {
     margin-top: 2rem;
 }
 
-/*-----Hébergements-----*/
+/*-----Lodgings Results-----*/
 
 .heb {
     display: grid;
     grid-template-columns: 2fr 1fr;
     column-gap: 2rem;
 }
+
+.lightNoteIcon {
+    color: var(--blue);
+    margin-right: -.1rem;
+}
+
+.darkNoteIcon {
+    color: var(--grey);
+    margin-right: -.1rem;
+}
+
+/*¤¤¤¤¤Main lodgings results¤¤¤¤¤*/
 
 .hebResults {
     display: flex;
@@ -261,7 +285,6 @@ nav {
 }
 
 .hebNoteIcons {
-    color: var(--blue);
     padding: .2rem 0 .5rem .5rem;
 }
 
@@ -269,6 +292,10 @@ nav {
     font-weight: bold;
     padding: 1.5rem 0 0 0;
 }
+
+/*¤¤¤¤¤End of Main lodgings results¤¤¤¤¤*/
+
+/*¤¤¤¤¤Popular lodgings results¤¤¤¤¤*/
 
 .hebPop {
     grid-column-start: 2;
@@ -333,11 +360,11 @@ nav {
     padding-top: .5rem;
 }
 
-.hebPopNoteIcons {
-    color: var(--blue);
-}
+/*¤¤¤¤¤End of Popular lodgings results¤¤¤¤¤*/
 
-/*----Activités----*/
+/*-----End of Lodgings Results-----*/
+
+/*----Activities Results----*/
 
 .act {
     display: flex;
@@ -376,9 +403,6 @@ nav {
 
 .actCardTitle {
     vertical-align: middle;
-    justify-self: stretch;
-    align-self: stretch;
-    max-height: auto;
     padding: 0 1rem .5rem 1rem;
 }
 
@@ -426,7 +450,11 @@ nav {
     align-self: flex-end;
 }
 
-/*--------------Pied de page-------------*/
+/*----End of Activities Results----*/
+
+/******End of Results Zone******/
+
+/******Footer - Various links******/
 
 footer {
     display: grid;
@@ -436,12 +464,32 @@ footer {
     line-height: 2rem;
 }
 
-@media screen and (max-width: 1024px){
+/******End of Footer - Various links******/
+
+/*=====End of Desktop version=====*/
+
+
+
+/*=====Tab version=====*/
+
+@media screen and (min-width: 800px) and (max-width: 1280px) {
+
     h1 {
+        font-size: 1.3rem;
         padding-top: 2rem;
     }
 
-    /*Header - Barre de navigation*/
+    h2 {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+    
+    h3 {
+        font-size: .85rem;
+        font-weight: bold;
+    }    
+
+    /******Header - Navbar******/
 
     nav {
         padding: 0;
@@ -490,14 +538,246 @@ footer {
         text-align: right;
     }
 
-    /*--------------Zone de recherche---------------*/
+    /******End of Header - Navbar******/
 
-    .localisation {
-        padding: .5rem 0 .3rem 0;
+    /******Search Zone******/
+
+    .searchZone {
+        padding: 0 2rem;
     }
+
+    /*-----Filters buttons-----*/
+
+    .filters {
+        align-items: flex-start;
+    }
+
+    .filterButtonsContainer {
+        flex-wrap: wrap;
+    }
+
+    .filterButton {
+        margin: 0 0 1.5rem 2rem;
+    }
+
+    .resultsInfo {
+        display: flex;
+        align-items: center;
+        padding-top: 1.5rem;
+    }
+
+    /*-----End of Filters buttons-----*/
+
+    /******End of Search Zone******/
+
+    /******Results Zone******/
+
+    .results {
+        padding: 0 2rem;
+    }
+
+    /*-----Lodgings Results-----*/
+
+    .heb {
+        grid-template-columns: 1fr;
+        row-gap: 1rem;
+    }
+
+    /*¤¤¤¤¤Main lodgings results¤¤¤¤¤*/
+
+    .hebResults {
+        grid-row-start: 2;
+        padding: 0 1rem;
+    }
+
+    .hebCardGroup {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        column-gap: 1rem;
+        row-gap: 1rem;
+    }
+
+    .hebCardPicture {
+        height: 9rem;
+    }
+    .moreLink {
+        padding: 1rem 0 1.5rem 0;
+    }
+
+    /*¤¤¤¤¤End of Main lodgings results¤¤¤¤¤*/
+
+    /*¤¤¤¤¤Popular lodgings results¤¤¤¤¤*/
+
+    .hebPop {
+        grid-column-start: 1;
+    }
+
+    .hebPopCardGroup {
+        row-gap: 1rem;
+    }
+
+    .hebPopCard {
+        min-height: 10rem;
+        max-height: 10rem;
+    }
+
+    .hebPopCardPicture {
+        height: auto;
+        width: 12rem;
+    }
+
+    /*¤¤¤¤¤End of Popular lodgings results¤¤¤¤¤*/
+
+    /*-----End of Lodgings Results-----*/
+
+    /*----Activities Results----*/
+
+    .actCardGroup {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1rem;
+        padding: 0 0 4rem 0;
+    }
+    
+    .actCardTitle {
+        vertical-align: middle;
+        justify-self: stretch;
+        align-self: stretch;
+        padding: .4rem 1rem .5rem 1rem;
+    }
+
+    .actCard1 {
+        height: 18rem;
+        grid-column-start: 1;
+        grid-row-start: 1;
+        grid-row-end: span 2;
+    }
+
+    .actCard2 {
+        height: 14rem;
+        grid-column-start: 2;
+        grid-row-start: 1;
+        grid-row-end: span 2;
+    }
+
+    .actCard3 {
+        height: 14rem;
+        grid-column-start: 2;
+        grid-row-start: 3;
+        grid-row-end: span 1;
+        align-self: flex-end;
+    }
+
+    .actCard4 {
+        height: 18rem;
+        grid-column-start: 3;
+        grid-row-start: 2;
+        grid-row-end: span 2;
+        align-self: flex-end;
+    }
+
+    .actCard5 {
+        height: 10rem;
+        grid-column: 1;
+        grid-row-start: 3;
+        grid-row-end: span 1;
+        align-self: flex-end;
+    }
+
+    .actCard6 {
+        height: 10rem;
+        grid-column-start: 3;
+        grid-row-start: 1;
+        grid-row-end: span 1;
+        align-self: flex-end;
+    }
+
+    /*----End of Activities Results----*/
+
+    /******End of Results Zone******/
+
+    /******Footer - Various links******/
+
+    footer {
+        padding: 1rem 2rem 2rem 2rem;
+        line-height: 1.8rem;
+        font-size: .8rem;
+        column-gap: 5rem;
+    }
+
+    /******End of Footer - Various links******/
+}
+
+/*=====End of Tab version=====*/
+
+/*=====Smartphone version=====*/
+
+@media screen and (max-width: 799px) {
+    h1 {
+        padding-top: 2rem;
+    }
+
+    /******Header - Navbar******/
+
+    nav {
+        padding: 0;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+
+    .logo {
+        padding: 2rem 0 0 2rem;
+    }
+
+    .navLinkHeb {
+        grid-row-start: 2;
+        grid-column-start: 1;
+        padding-bottom: 20px;
+        border-bottom: 2px solid var(--bordernav);
+        text-align: center;
+    }
+
+    .navLinkAct {
+        grid-row-start: 2;
+        grid-column-start: 2;
+        padding-bottom: 20px;
+        border-bottom: 2px solid var(--bordernav);
+        text-align: center;
+    }
+
+    .navLink:hover {
+        border-top: none;
+        font-weight: bold;
+    }
+
+    .navLinkHeb:hover {
+        color: var(--blue);
+        border-top: none;
+        border-bottom: 2px solid var(--blue);
+    }
+
+    .navLinkAct:hover {
+        color: var(--blue);
+        border-top: none;
+        border-bottom: 2px solid var(--blue);
+    }
+
+    .suscribeLink {
+        text-align: right;
+    }
+
+    /******End of Header - Navbar******/
+
+    /******Search Zone******/
 
     .searchZone {
         padding: 0 2rem 0 2rem;
+    }
+
+    /*-----Form bar-----*/
+
+    .localisation {
+        padding: .5rem 0 .3rem 0;
     }
 
     .geoIcon {
@@ -532,7 +812,9 @@ footer {
         cursor: pointer;
     }
 
-    /*Filtres*/
+    /*-----End of Form bar-----*/
+
+    /*-----Filters buttons-----*/
 
     .filters {
         flex-direction: column;
@@ -560,17 +842,25 @@ footer {
         width: 2rem;
     }
 
-    /*--------------------Zone de résultats de recherche-------------------*/
+    /*-----End of Filters buttons-----*/
+
+    /******End of Search Zone******/
+
+    /******Results Zone******/
 
     .results {
         padding: 0;
     }
+
+    /*-----Lodgings Results-----*/
 
     .heb {
         grid-template-columns: auto;
         column-gap: 0rem;
         row-gap: 1rem;
     }
+
+    /*¤¤¤¤¤Main lodgings results¤¤¤¤¤*/
 
     .hebResults {
         grid-row-start: 2;
@@ -591,6 +881,10 @@ footer {
         padding: 0 0 1rem 0;
     }
 
+    /*¤¤¤¤¤End of Main lodgings results¤¤¤¤¤*/
+
+    /*¤¤¤¤¤Popular lodgings results¤¤¤¤¤*/
+
     .hebPop {
         grid-column-start: 1;
         grid-row-start: 1;
@@ -606,7 +900,11 @@ footer {
         row-gap: 1rem;
     }
 
-    /*----Activités----*/
+    /*¤¤¤¤¤End of Popular lodgings results¤¤¤¤¤*/
+
+    /*-----End of Lodgings Results-----*/
+
+    /*----Activities Results----*/
 
     .act {
         padding: 1rem 2rem;
@@ -667,9 +965,19 @@ footer {
         align-self: initial;
     }
 
+    /*----End of Activities Results----*/
+
+    /******End of Results Zone******/
+
+    /******Footer - Various links******/
+
     footer {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         padding: 1rem 2rem 2rem 2rem;
     }
+
+    /******End of Footer - Various links******/
 }
+
+/*=====End of Smartphone version=====*/
