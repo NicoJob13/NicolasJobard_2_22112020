@@ -176,7 +176,7 @@ nav {
     border-radius: 3rem;
     color: var(--blue);
     margin-right: 1rem;
-    margin-left: -1rem;
+    margin-left: -.7rem;
 }
 
 .filterText {
@@ -293,6 +293,30 @@ nav {
     padding: 1.5rem 0 0 0;
 }
 
+.hebCardPicture1 {
+    object-position: top;
+}
+
+.hebCardPicture2 {
+    object-position: 0% 65%;
+}
+
+.hebCardPicture3 {
+    object-position: 0% 75%;
+}
+
+.hebCardPicture4 {
+    object-position: 0% 70%;
+}
+
+.hebCardPicture5 {
+    object-position: top;
+}
+
+.hebCardPicture6 {
+    object-position: 0% 60%;
+}
+
 /*¤¤¤¤¤End of Main lodgings results¤¤¤¤¤*/
 
 /*¤¤¤¤¤Popular lodgings results¤¤¤¤¤*/
@@ -352,12 +376,8 @@ nav {
     flex-direction: column;
 }
 
-.hebPopCardTitle {
-    margin: 0;
-}
-
 .hebPopTarif {
-    padding-top: .5rem;
+    padding: .5rem 0 .5rem 0;
 }
 
 /*¤¤¤¤¤End of Popular lodgings results¤¤¤¤¤*/
@@ -501,36 +521,32 @@ footer {
         padding: 2rem 0 0 2rem;
     }
 
+    .navLink {
+        padding-bottom: 20px;
+        border-bottom: 2px solid var(--bordernav);
+    }
+
     .navLinkHeb {
         grid-row-start: 2;
         grid-column-start: 1;
-        padding-bottom: 20px;
-        border-bottom: 2px solid var(--bordernav);
-        text-align: center;
     }
 
     .navLinkAct {
         grid-row-start: 2;
         grid-column-start: 2;
-        padding-bottom: 20px;
-        border-bottom: 2px solid var(--bordernav);
-        text-align: center;
-    }
-
-    .navLink:hover {
-        border-top: none;
-        font-weight: bold;
     }
 
     .navLinkHeb:hover {
         color: var(--blue);
         border-top: none;
+        padding-bottom: 21px;
         border-bottom: 2px solid var(--blue);
     }
 
     .navLinkAct:hover {
         color: var(--blue);
         border-top: none;
+        padding-bottom: 21px;
         border-bottom: 2px solid var(--blue);
     }
 
@@ -573,7 +589,7 @@ footer {
     /******Results Zone******/
 
     .results {
-        padding: 0 2rem;
+        padding: 0 .2rem;
     }
 
     /*-----Lodgings Results-----*/
@@ -587,13 +603,13 @@ footer {
 
     .hebResults {
         grid-row-start: 2;
-        padding: 0 1rem;
+        padding: 0 .2rem;
     }
 
     .hebCardGroup {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(3, 1fr);
-        column-gap: 1rem;
+        column-gap: .8rem;
         row-gap: 1rem;
     }
 
@@ -601,7 +617,7 @@ footer {
         height: 9rem;
     }
     .moreLink {
-        padding: 1rem 0 1.5rem 0;
+        padding: 1rem 0 1.5rem 1rem;
     }
 
     /*¤¤¤¤¤End of Main lodgings results¤¤¤¤¤*/
@@ -610,20 +626,60 @@ footer {
 
     .hebPop {
         grid-column-start: 1;
+        padding: 0 .2rem 2rem .2rem;
     }
 
     .hebPopCardGroup {
-        row-gap: 1rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: .5rem;
     }
 
     .hebPopCard {
-        min-height: 10rem;
-        max-height: 10rem;
+        min-height: 13rem;
+        max-height: 13rem;
+        flex-direction: column;
+        padding: 0;
     }
 
     .hebPopCardPicture {
-        height: auto;
-        width: 12rem;
+        height: 7.9rem;
+        width: auto;
+        border-radius: 1rem 1rem 0 0;
+    }
+
+    .hebPopCardInfo {
+        padding: .5rem .3rem 0 .3rem;
+    }
+    
+    .hebPopCardText {
+        justify-content: space-between;
+    }
+    
+    .hebPopCardTitle {
+        margin: 0;
+    }
+    
+    .hebPopTarif {
+        margin: 0;
+        padding: .5rem 0 .5rem 0;
+    }
+    
+    .hebPopNoteIcons {
+        margin: 0;
+        vertical-align: bottom;
+    }
+
+    .hebPopCardPicture1 {
+        object-position: 0% 70%;
+    }
+    
+    .hebPopCardPicture2 {
+        object-position: 0% 65%;
+    }
+    
+    .hebPopCardPicture3 {
+        object-position: 0% 60%;
     }
 
     /*¤¤¤¤¤End of Popular lodgings results¤¤¤¤¤*/
@@ -631,6 +687,12 @@ footer {
     /*-----End of Lodgings Results-----*/
 
     /*----Activities Results----*/
+
+    .act {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem .5rem;
+    }
 
     .actCardGroup {
         display: grid;
@@ -729,36 +791,32 @@ footer {
         padding: 2rem 0 0 2rem;
     }
 
+    .navLink {
+        padding-bottom: 20px;
+        border-bottom: 2px solid var(--bordernav);
+    }
+
     .navLinkHeb {
         grid-row-start: 2;
         grid-column-start: 1;
-        padding-bottom: 20px;
-        border-bottom: 2px solid var(--bordernav);
-        text-align: center;
     }
 
     .navLinkAct {
         grid-row-start: 2;
         grid-column-start: 2;
-        padding-bottom: 20px;
-        border-bottom: 2px solid var(--bordernav);
-        text-align: center;
-    }
-
-    .navLink:hover {
-        border-top: none;
-        font-weight: bold;
     }
 
     .navLinkHeb:hover {
         color: var(--blue);
         border-top: none;
+        padding-bottom: 21px;
         border-bottom: 2px solid var(--blue);
     }
 
     .navLinkAct:hover {
         color: var(--blue);
         border-top: none;
+        padding-bottom: 21px;
         border-bottom: 2px solid var(--blue);
     }
 
