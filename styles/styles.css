@@ -90,8 +90,8 @@ nav {
 }
 
 .geoIcon {
-    height: 2.5rem;
-    width: 2.5rem;
+    height: 3rem;
+    width: 3rem;
     border: none;
     border-radius: 13px 0 0 13px;
 }
@@ -106,14 +106,14 @@ nav {
     font-weight: bold;
     color: black;
     border: 1px solid var(--grey);
-    height: 2.5rem;
-    width: 15rem;
+    height: 3rem;
+    width: 12rem;
     padding-left: .7rem;
 }
 
 .searchText {
-    height: 2.5rem;
-    width: 8.4rem;
+    height: 3rem;
+    width: 8rem;
     background-color: var(--blue);
     color: white;
     font-weight: bold;
@@ -187,8 +187,8 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 1.6rem;
-    width: 1.6rem;
+    height: 1.7rem;
+    width: 1.7rem;
     background-color: white;
     border: 2px solid var(--grey);
     border-radius: 3rem;
@@ -219,7 +219,7 @@ nav {
 .heb {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    column-gap: 2rem;
+    column-gap: 2.5rem;
 }
 
 .lightNoteIcon {
@@ -246,7 +246,7 @@ nav {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: repeat(2, 1fr);
-    column-gap: 1.5rem;
+    column-gap: 2rem;
     row-gap: 2rem;
     padding: 0 0 1rem 0;
 }
@@ -395,19 +395,17 @@ nav {
 .actCardGroup {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 2.5rem;
-    padding: 0 0 5rem 0;
+    column-gap: 3rem;
+    row-gap: 2rem;
+    padding: 0 0 1.5rem 0;
 }
 
 .actCard {
-    height: 100%;
-    max-height: 29rem;
     display: flex;
     flex-direction: column;
     background-color: white;
     border-radius: 1rem;
     box-shadow: 0 .1rem .4rem .1rem var(--bordernav);
-    padding: 0 0 3.5rem 0;
 }
 
 .actCard:hover {
@@ -415,59 +413,78 @@ nav {
 }
 
 .actCardPicture {
-    height: 100%;
-    width: 100%;
+    min-height: 0;
+    min-width: 0;
+    max-width: 100%;
     border-radius: 1rem 1rem 0 0;
     object-fit: cover;
 }
 
 .actCardTitle {
-    vertical-align: middle;
-    padding: 0 1rem .5rem 1rem;
+    flex: 1 1 3rem;
+    vertical-align: auto;
+    padding: 0rem 1rem;
+    margin: 0;
 }
 
 .actCard1 {
-    height: 27.5rem;
-    grid-column-start: 1;
-    grid-row-start: 1;
-    grid-row-end: span 2;
+    grid-column: 1 / 1;
+    grid-row: 1 / span 3;
 }
 
 .actCard2 {
-    height: 12rem;
-    grid-column-start: 2;
-    grid-row-start: 1;
-    grid-row-end: span 2;
+    grid-column: 2 / 2;
+    grid-row: 1 / span 2;
 }
 
 .actCard3 {
-    height: 10rem;
-    grid-column-start: 2;
-    grid-row-start: 2;
-    grid-row-end: span 1;
-    align-self: flex-end;
+    grid-column: 2 / 2;
+    grid-row: 3 / 3;
 }
 
 .actCard4 {
-    height: 27.5rem;
-    grid-column-start: 3;
-    grid-row-start: 1;
-    grid-row-end: span 2;
+    grid-column: 3 / 3;
+    grid-row: 1 / span 3;
 }
 
 .actCard5 {
-    height: 10rem;
-    grid-column: 4;
-    grid-row-start: 1;
-    grid-row-end: span 1;
+    grid-column: 4 / 4;
+    grid-row: 1 / 1;
 }
 
 .actCard6 {
-    height: 12rem;
-    grid-column-start: 4;
-    grid-row-start: 2;
-    grid-row-end: span 3;
-    align-self: flex-end;
+    grid-column: 4 / 4;
+    grid-row: 2 / span 2;
+}
+
+.actCardPicture1 {
+    flex: 1 1 26rem;
+    object-position: 50% 0%;
+}
+
+.actCardPicture2 {
+    flex: 1 1 13rem;
+    object-position: 0% 45%;
+}
+
+.actCardPicture3 {
+    flex: 1 1 8rem;
+    object-position: 0% 20%;
+}
+
+.actCardPicture4 {
+    flex: 1 1 26rem;
+    object-position: 60% 30%;
+}
+
+.actCardPicture5 {
+    flex: 1 1 8rem;
+    object-position: 0% 15%;
+}
+
+.actCardPicture6 {
+    flex: 1 1 13rem;
+    object-position: 0% 35%;
 }
 
 /*----End of Activities Results----*/
@@ -481,6 +498,17 @@ footer {
     grid-template-columns: 1fr 1fr 1fr;
     background-color: var(--grey);
     padding: 1rem 3rem 2rem 3rem;
+}
+
+.colFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.footerLinks {
+    display: flex;
+    flex-direction: column;
     line-height: 2rem;
 }
 
@@ -691,67 +719,52 @@ footer {
     .act {
         display: flex;
         flex-direction: column;
-        padding: 2rem .5rem;
+        padding: 1rem .5rem;
     }
 
     .actCardGroup {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         column-gap: 1rem;
-        padding: 0 0 4rem 0;
     }
     
-    .actCardTitle {
-        vertical-align: middle;
-        justify-self: stretch;
-        align-self: stretch;
-        padding: .4rem 1rem .5rem 1rem;
+    .actCard {
+        height: 16rem;
+    }
+
+    .actCardPicture {
+        min-height: 13rem;
+        max-height: 13rem;
     }
 
     .actCard1 {
-        height: 18rem;
-        grid-column-start: 1;
-        grid-row-start: 1;
-        grid-row-end: span 2;
+        grid-column-start: 1 / 1;
+        grid-row: 1 / 1;
     }
 
     .actCard2 {
-        height: 14rem;
-        grid-column-start: 2;
-        grid-row-start: 1;
-        grid-row-end: span 2;
+        grid-column: 1 / 1;
+        grid-row: 2 / 2;
     }
 
     .actCard3 {
-        height: 14rem;
-        grid-column-start: 2;
-        grid-row-start: 3;
-        grid-row-end: span 1;
-        align-self: flex-end;
+        grid-column: 2 / 2;
+        grid-row: 1 / 1;
     }
 
     .actCard4 {
-        height: 18rem;
-        grid-column-start: 3;
-        grid-row-start: 2;
-        grid-row-end: span 2;
-        align-self: flex-end;
+        grid-column: 2 / 2;
+        grid-row: 2 / 2;
     }
 
     .actCard5 {
-        height: 10rem;
-        grid-column: 1;
-        grid-row-start: 3;
-        grid-row-end: span 1;
-        align-self: flex-end;
+        grid-column: 3 / 3;
+        grid-row: 1 / 1;
     }
 
     .actCard6 {
-        height: 10rem;
-        grid-column-start: 3;
-        grid-row-start: 1;
-        grid-row-end: span 1;
-        align-self: flex-end;
+        grid-column: 3 / 3;
+        grid-row: 2 / 2;
     }
 
     /*----End of Activities Results----*/
@@ -839,7 +852,7 @@ footer {
     }
 
     .geoIcon {
-        width: 8vw;
+        width: 10vw;
     }
 
     .searchText {
@@ -847,13 +860,13 @@ footer {
     }
     
     .cityInput {
-        width: 68vw;
+        width: 64vw;
     }
     
     .searchIcon {
         display: initial;
-        height: 2.5rem;
-        width: 9vw;
+        height: 3rem;
+        width: 10vw;
         background-color: var(--blue);
         color: white;
         font-weight: bold;
@@ -970,57 +983,73 @@ footer {
 
     .actCardGroup {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(6, 15rem);
         column-gap: 0;
-        row-gap: 1rem;
-        padding: 0;
+        row-gap: 1.5rem;
+        padding: 0 0;
     }
 
     .actCard {
-        height: 11rem;
+        height: 13rem;
     }
 
     .actCard1 {
-        height: auto;
-        grid-column-start: 1;
-        grid-row-start: 1;
-        grid-row-end: span 1;
+        grid-column: 1 /1;
+        grid-row: 1 / 1;
     }
     
     .actCard2 {
-        height: auto;
-        grid-column-start: 1;
-        grid-row-start: 2;
-        grid-row-end: span 1;
+        grid-column: 1 / 1;
+        grid-row: 2 / 2;
     }
     
     .actCard3 {
-        height: auto;
-        grid-column-start: 1;
-        grid-row-start: 3;
-        grid-row-end: span 1;
-        align-self: initial;
+        grid-column: 1 / 1;
+        grid-row: 3 / 3;
     }
     
     .actCard4 {
-        height: auto;
-        grid-column-start: 1;
-        grid-row-start: 4;
-        grid-row-end: span 1;
+        grid-column: 1 / 1;
+        grid-row: 4 / 4;
     }
     
     .actCard5 {
-        height: 11rem;
-        grid-column-start: 1;
-        grid-row-start: 5;
-        grid-row-end: span 1;
+        grid-column: 1 / 1;
+        grid-row: 5 / 5;
     }
     
     .actCard6 {
-        height: 9rem;
-        grid-column-start: 1;
-        grid-row-start: 6;
-        align-self: initial;
+        grid-column: 1 / 1;
+        grid-row: 6 / 6;
+    }
+
+    .actCardPicture1 {
+        flex: 1 1 9rem;
+        object-position: 50% 40%;
+    }
+    
+    .actCardPicture2 {
+        flex: 1 1 9rem;
+        object-position: 0% 45%;
+    }
+    
+    .actCardPicture3 {
+        flex: 1 1 9rem;
+        object-position: 0% 20%;
+    }
+    
+    .actCardPicture4 {
+        flex: 1 1 9rem;
+        object-position: 60% 30%;
+    }
+    
+    .actCardPicture5 {
+        flex: 1 1 9rem;
+        object-position: 0% 15%;
+    }
+    
+    .actCardPicture6 {
+        flex: 1 1 9rem;
+        object-position: 0% 35%;
     }
 
     /*----End of Activities Results----*/
@@ -1031,8 +1060,8 @@ footer {
 
     footer {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        padding: 1rem 2rem 2rem 2rem;
+        row-gap: 1rem;
+        padding: 1rem 2rem 1rem 2rem;
     }
 
     /******End of Footer - Various links******/
