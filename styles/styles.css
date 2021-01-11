@@ -256,7 +256,7 @@ nav {
     flex-direction: column;
     background-color: white;
     border-radius: 1rem;
-    border: 3px solid white;
+    border: 3px solid #ffffff00;
     box-shadow: 0 .1rem .4rem .1rem var(--bordernav);
 }
 
@@ -348,7 +348,7 @@ nav {
     display: flex;
     background-color: white;
     border-radius: 1rem;
-    border: 3px solid white;
+    border: 3px solid #ffffff00;
     box-shadow: 0 .1rem .4rem .1rem var(--bordernav);
 }
 
@@ -422,7 +422,7 @@ nav {
 
 .actCardTitle {
     flex: 1 1 3rem;
-    vertical-align: auto;
+    vertical-align: middle;
     padding: 0rem 1rem;
     margin: 0;
 }
@@ -738,7 +738,7 @@ footer {
     }
 
     .actCard1 {
-        grid-column-start: 1 / 1;
+        grid-column: 1 / 1;
         grid-row: 1 / 1;
     }
 
