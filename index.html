@@ -9,41 +9,33 @@
 		<script src="https://kit.fontawesome.com/1ff953b2ad.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <!--Header contenant logo, menu de navigation et un lien vers la page d'inscription-->
-        <header>
+        <header class="viewport"><!--Entête contenant le logo du site, le menu de navigation et un lien vers la page d'inscription-->
             <nav>
 				<a class="logo" href="index.html"><img src="images/logo/Reservia.svg" alt="logo du site contenant l'expression Reservia en bleu"></a>
 				<a class="navLink navLinkHeb" href="#hebergement">Hébergements</a>
 				<a class="navLink navLinkAct" href="#activites">Activités</a>
 				<a class="suscribeLink" href="#"><strong>S'inscrire</strong></a>
 			</nav>
-        </header>     
-        <!--Corps de page : recherche, résultats, activités-->
-		<main>
-            <!--Zone de recherche avec un formulaire pour la localisation et des boutons pour les filtres-->
-            <section class="searchZone">
+        </header><!--Fin de l'entête-->     
+        <main class="viewport"><!--Corps principal de la page composé de 3 parties principales : la recherche, les résultats d'hébergement, les activités-->
+            <section class="searchZone"><!--Zone de recherche avec un formulaire pour le lieu, des boutons pour les filtres-->
                 <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
                 <h2>En plein centre ville ou en pleine nature</h2>
-				<!--Formulaire-->
-				<div>
+				<div><!--Formulaire de recherche de la localité-->
 					<form class="localisation" method="post" action="#">
-						<!--Bouton de géolocalisation avec icône-->
-						<div>
+						<div><!--Bouton de géolocalisation avec icône-->
 							<button class="geoIcon"><i class="fas fa-map-marker-alt"></i></button>                            
 						</div>
-						<!--Champ de saisie de la ville-->
-						<div>
+						<div><!--Champ de saisie de la ville-->
 							<input type="search" name="ville" id="ville" class="cityInput" placeholder="Marseille, France">
 						</div>
-						<!--Bouton de soumission-->
-						<div>
+						<div><!--Bouton de soumission-->
 							<button type="submit" class="searchText"><span>Rechercher</span></button>
 							<button type="submit" class="searchIcon"><i class="fas fa-search"></i></button>
 						</div>
 					</form>
-				</div>                    
-				<!--Filtres sous forme de boutons-->
-				<div>
+				</div><!--Fin du formulaire-->
+				<div><!--Filtres sous forme de boutons-->
 					<div class="filters">
 						<h3>Filtres</h3>
 						<div class="filterButtonsContainer">
@@ -57,16 +49,13 @@
 						<span class="infoCircleIcon"><i class="fas fa-info"></i></span>
 						<span>Plus de 500 logements sont disponibles dans cette ville</span>
 					</div>
-				</div>
-            </section>
-            <!--Zone de résultats-->
-			<div class="results">
-			<!--Résultats de la recherche-->
-				<div class="heb">
-					<section class="hebResults">
+				</div><!--Fin des filtres-->
+            </section><!--Fin de la zone de recherche-->
+			<div class="results"><!--Zone de résultats-->
+				<div class="heb"><!--Résultats de la recherche d'hébergements-->
+					<section class="hebResults"><!--Les hébergements sur le secteur avec lien pour voir la totalité-->
 						<h2>Hébergements à Marseille</h2>
-						<!--Galerie de photos avec description, le tout entièrement cliquable-->
-						<div class="hebCardGroup">
+						<div class="hebCardGroup"><!--Galerie de photos composée de cartes avec description, prix et note, chaque carte entièrement cliquable-->
 							<a href="#">
 							<article class="hebCard">
 								<img class="hebCardPicture hebCardPicture1" src="images/hebergements/medium/LaCannebiere.jpg" alt="photographie d'une chambre de l'Hôtel La Cannebière">
@@ -163,21 +152,19 @@
 								</div>
 							</article>
 							</a>
+						</div><!--Fin de la galerie-->
+						<div class="moreLink"><!--Lien vers la page contenant tous les résultats de recherche-->
+							<a href="#">Afficher plus</a>
 						</div>
-						<!--Lien vers une page contenant tous les résultats de recherche-->
-						<div class="moreLink"><a href="#">Afficher plus</a></div>
-					</section>  
-				<!--Les hébergements les plus populaires-->
-					<aside class="hebPop">
+					</section><!--Fin de l'ensemble des hébergements du secteur-->
+					<aside class="hebPop"><!--Les hébergements les plus populaires du secteur-->
 						<div class="hebPopTitle">
 							<h2>Les plus populaires</h2>
-							<!--Icône-->
-							<span>
+							<span><!--Icône-->
 								<i class="fas fa-chart-line"></i>
 							</span>
 						</div>
-						<!--Galerie de photos avec description, le tout entièrement cliquable-->
-						<div class="hebPopCardGroup">
+						<div class="hebPopCardGroup"><!--Galerie de photos composée de cartes avec description, prix et note, chaque carte entièrement cliquable-->
 							<a href="#">
 							<article class="hebPopCard">
 								<img class="hebPopCardPicture hebPopCardPicture1" src="images/hebergements/medium/LeSoleilDuMatin.jpg" alt="photographie d'une chambre de l'Hôtel Le soleil du matin">
@@ -232,14 +219,12 @@
 								</div>
 							</article>
 							</a>
-						</div>
-					</aside>
-				</div>             
-			<!--Les activités possibles sur le secteur de recherche-->
-				<div class="act">
+						</div><!--Fin de la galerie-->
+					</aside><!--Fin des hébergements les plus populaires-->
+				</div> <!--Fin des résultats de la recherche d'hébergements-->
+				<div class="act"><!--Les activités possibles sur le secteur de recherche-->
 					<h2 class="actTitle">Activités à Marseille</h2>
-					<!--Galerie de photos cliquables-->
-					<div class="actCardGroup">
+					<div class="actCardGroup"><!--Galerie de photos composée de cartes cliquables-->
 						<a class="actCard1" href="#">
 						<article class="actCard">
 							<img class="actCardPicture actCardPicture1" src="images/activites/medium/VieuxPort.jpg" alt="photographie du vieux port de Marseille">
@@ -288,35 +273,35 @@
 							</div>
 						</article>
 						</a>
-					</div>
+					</div><!--Fin de la galerie-->
+				</div><!--Fin des activités-->
+			</div><!--Fin de la zone de résultats-->
+        </main><!--Fin du corps principal de la page-->
+        <footer><!--Pied de page destiné aux mentions obligatoires, à la charte qualité et à l'assistance, avec possibilité de contact et de candidature pour référencement des hôtels-->
+			<div class="viewport footer"><!--Trois zones, dans un container pour la gestion du viewport, chacune comprenant des liens-->
+				<section class="colFooter">
+				<h3>A propos</h3>
+				<div class="footerLinks">
+					<a href="#">Fonctionnement du site</a>
+					<a href="#">Conditions générales de vente</a>
+					<a href="#">Données et confidentialité</a>
 				</div>
+				</section>
+				<section class="colFooter">
+				<h3>Nos hébergements</h3>
+				<div class="footerLinks">
+					<a href="#">Charte qualité</a>
+					<a href="#">Soumettre votre hôtel</a>
+				</div>
+				</section>
+				<section class="colFooter">
+				<h3>Assistance</h3>
+				<div class="footerLinks">
+					<a href="#">Centre d'aide</a>
+					<a href="#">Nous contacter</a>
+				</div>
+				</section>
 			</div>
-        </main>
-        <!--Pied de page destiné aux mentions obligatoires, à la charte qualité et à l'assistance, avec possibilité de contact et de candidature pour référencement des hôtels-->
-        <footer>
-            <!--Trois zones, A propos, Nos hébergements et Assistance, comprenant chacune des liens-->
-			<section class="colFooter aPropos">
-			<h3>A propos</h3>
-			<div class="footerLinks">
-				<a href="#">Fonctionnement du site</a>
-				<a href="#">Conditions générales de vente</a>
-				<a href="#">Données et confidentialité</a>
-			</div>
-			</section>
-            <section class="colFooter">
-			<h3>Nos hébergements</h3>
-			<div class="footerLinks">
-				<a href="#">Charte qualité</a>
-				<a href="#">Soumettre votre hôtel</a>
-			</div>
-			</section>
-			<section class="colFooter">
-			<h3>Assistance</h3>
-			<div class="footerLinks">
-				<a href="#">Centre d'aide</a>
-				<a href="#">Nous contacter</a>
-			</div>
-			</section>
-        </footer>
+        </footer><!--Fin du pied de page-->
     </body>
 </html>
